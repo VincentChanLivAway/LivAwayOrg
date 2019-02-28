@@ -1,0 +1,266 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+    - var header_one_page    = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.fullscreen.text-center(data-background="assets/images/module-2.jpg" data-jarallax-video="mp4:assets/video/video.mp4" data-overlay="0.45")
+        .container
+
+            .row
+                .col-md-12
+                    h1.m-b-20: strong LivAway Startup Hub
+                    p.m-b-40 Deeply connect foreign startups with local expert network.
+                    p
+                        a(href="#services" class="btn btn-lg btn-circle btn-outline-new-white") Learn More
+    // Hero end
+
+    = "\n"
+
+    // Services
+    section.module#services
+        .container
+
+            .row
+                .col-lg-4.col-md-6
+                    +IconBox("ti-pulse", "Ownership", "Startup is HARD, you have up-and-downs all the time. LivAway local experts put ourselves in your shoes to be your partners.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-thought", "Knowhow", "Something troubles your business a lot may just be a piece of cake to locals, LivAway experts share you all the knowhow you need to do business here.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-search", "Vendor Verification", "Local vendors are sometimes confusing, LivAway helps you to verify and suggest the most reliable ones.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-location-pin", "3rd-Tier Cities", "Ready to reach the rural population but don't know how? LivAway network in small cities of China takes your business in.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-world", "Asset Liquidity", "LivAway uses blockchain technology to maximize the liquidity of your startup's equity and assets. ", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-paint-bucket", "Local MVP", "See how your business model is doing in a total culture-different market, even before you enter China.", "")
+    // Services end
+    = "\n"
+
+    // Counters
+    section.module.bg-gray.p-b-0
+        .container
+
+            .row
+                .col-md-3
+                    +Counter("Local Experts", "537", "icon-energy icons")
+                .col-md-3
+                    +Counter("Local Startup Partners", "54", "icon-game-controller icons")
+                .col-md-3
+                    +Counter("Business Events Hold", "103", "icon-fire icons")
+                .col-md-3
+                    +Counter("Different Cites", "5", "icon-diamond icons")
+    // Counters end
+
+    = "\n"
+
+    // Image
+    section.module.no-gutters.p-0
+        .container-fluid
+
+            .row
+                .col-md-12
+                    img(src="assets/images/module-18.jpg" alt="")
+    // Image end
+
+    
+    
+    // Posts
+    section.module#events
+        .container
+
+            .row
+                .col-md-6.m-auto.text-center
+                    h1 Business Events.
+                    p.lead LivAway hosts Local Advise events to deeply connect foreign startups and local experts. Our warm-hearted members also partipant in local non-profit charity events.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row.row-post-masonry
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/events/3.jpg", "Local Startup Advice Road Show", "LivAway invites 3~4 projects to road show in front of local experts, recieve sincere advice of knowhow and feasibility.", "")
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/events/5.jpg", "Local Carrer Advice", "LivAway local professions and experts shares advice to expat newly landed, or fresh foreign graduates in China who would like to find jobs.", "")
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/events/6.jpg", "Lean Startup Workshop", "LivAway startup mentors lectures about Lean Startup in China, how foreign startup can adopt this methodology in local market.", "")
+
+            .row.row-post-masonry
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/events/4.jpg", "Local Industry Advice", "LivAway local industry leads helps foreign startups get to know the local industry.", "")
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/events/1.jpg", "Sebian Economy Forum", "LivAway volunteers helped hosting and organizing economy forums.", "")
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/events/2.jpg", "Charity Market for Buy42", "LivAway volunteers co-hosted charity event for local NGO lead.", "")
+
+            
+    // Posts end
+
+    = "\n"
+
+    // Partners
+
+    // Team
+    section.module#team
+        .container
+
+            .row
+                .col-md-6.m-auto.text-center
+                    h1 Local Experts Network
+                    p.lead LivAway expert team consists of local business professions and foreigners doing business in China for 10+ years.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/1.jpg", "Vincent Chan", "Founder")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/2.jpg", "Eik Li", "Cofounder")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/3.jpg", "Gianluca Francasso", "Senior Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/4.jpg", "Dusan Nesic", "Senior Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/5.jpg", "Bingo Yao", "Senior Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/6.jpg", "Grey Shen", "Senior Partner")
+
+            .row
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/7.jpg", "Laura Shang", "Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/8.jpg", "Michelle Yang", "Senior Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/9.jpg", "Sabrina Hu", "Senior Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/10.jpg", "Julian Mintz", "Senior Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/11.jpg", "Angie Guo", "Senior Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/12.jpg", "Steven Wang", "Senior Partner")
+
+            .row
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/13.jpg", "Beti Liu", "Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/14.jpg", "Alin Harbuz", "Cofounder")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/15.jpg", "Tommaso Sora", "Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/16.jpg", "Justin Scholar", "Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/17.jpg", "David Atnip", "Partner")
+                .col-lg-2.col-md-2
+                    +team("assets/images/team/18.jpg", "Groria Zhao", "Partner")
+
+            .row
+                .col-md-12
+                    .space(data-MY="30px")
+
+            .row
+                .col-md-12
+                    p.text-center: a(href="https://www.wjx.top/jq/28385402.aspx" class="btn btn-circle btn-outline-brand") Join Our Expert Network
+    // Team end
+
+    .row#partners
+        .col-md-6.m-auto.text-center
+            h1 Our Partners
+
+    .owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+        .client
+            img(src="assets/images/partners/1.png" alt="")
+        .client
+            img(src="assets/images/partners/14.png" alt="")
+        .client
+            img(src="assets/images/partners/20.png" alt="")
+        .client
+            img(src="assets/images/partners/18.png" alt="")
+        .client
+            img(src="assets/images/partners/10.png" alt="")
+        .client
+            img(src="assets/images/partners/7.png" alt="")
+
+    .owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+        .client
+            img(src="assets/images/partners/15.png" alt="")
+        .client
+            img(src="assets/images/partners/13.png" alt="")
+        .client
+            img(src="assets/images/partners/11.png" alt="")
+        .client
+            img(src="assets/images/partners/6.png" alt="")
+        .client
+            img(src="assets/images/partners/5.png" alt="")
+        .client
+            img(src="assets/images/partners/3.png" alt="")
+        .client
+            img(src="assets/images/partners/2.png" alt="")
+            
+    .owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+        .client
+            img(src="assets/images/partners/9.png" alt="")
+        .client
+            img(src="assets/images/partners/12.png" alt="")
+        .client
+            img(src="assets/images/partners/16.png" alt="")
+        .client
+            img(src="assets/images/partners/17.png" alt="")
+        .client
+            img(src="assets/images/partners/21.png" alt="")
+        .client
+            img(src="assets/images/partners/4.png" alt="")
+        .client
+            img(src="assets/images/partners/19.png" alt="")
+    // Partners end
+
+    = "\n"
+
+    // Form
+    //section.module.divider-top#contact
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Let's talk.
+                    p.lead See how we can help your startup to reach great success in Chinese market.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-12
+                    form#contact-form(method="post" novalidate)
+                        .row
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="text" name="name" placeholder="Name" required="")
+                                    p.help-block.text-danger
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="email" name="email" placeholder="E-mail" required="")
+                                    p.help-block.text-danger
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="text" name="subject" placeholder="Subject" required="")
+                                    p.help-block.text-danger
+                            .col-md-12
+                                .form-group
+                                    textarea.form-control(name="message" placeholder="Message" rows="12" required="")
+                            .col-md-12
+                                p
+                                .text-center
+                                    input(type="submit" class="btn btn-circle btn-brand" value="Send Message")
+                    // Ajax response
+                    #contact-response.ajax-response.text-center
+    // Form end
+
+    = "\n"
