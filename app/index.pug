@@ -14,7 +14,7 @@ append content
 
             .row
                 .col-md-12
-                    h1.m-b-20: strong LivAway Startup Hub
+                    h1.m-b-20: strong LivAway Community
                     p.m-b-40 Connecting foreign startups with a truly local network.
                     p
                         a(href="#services" class="btn btn-lg btn-circle btn-outline-new-white") Learn More
@@ -27,21 +27,64 @@ append content
         .container
 
             .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Test Marketing Service
+                    p.lead Promote your product/service demo to targeted Chinese customer/distributor for feedback. Align your product to the targeted niche. 
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-12
+                    img(src="assets/images/main/notebook.png" alt="")
+
+            .row
                 .col-lg-4.col-md-6
-                    +IconBox("ti-paint-bucket", "Local Advice", "Find the critical risk in your business model by talking to LivAway local experts. Free of charge, foreign connections are all we need.", "")
+                    +iconBoxLeft("ti-layout-media-left", "Find the Target", "Tell us your target, no matter they are corporate customers, distributors, or individual customers, we find them out.")
                 .col-lg-4.col-md-6
-                    +IconBox("ti-pulse", "Ownership", "Startups are HARD, you have ups and downs all the time. LivAway local experts put ourselves in your shoes to be your partners.", "")
+                    +iconBoxLeft("ti-desktop", "Deep Interview", "Invite the target to have a confernce with you for 1+ hour, using Chinese ways to dig deep about decistion making process.")
                 .col-lg-4.col-md-6
-                    +IconBox("ti-thought", "Knowhow", "Something that troubles your business a lot may just be a piece of cake to locals. LivAway experts share you all the knowhow you need to do business here.", "")
+                    +iconBoxLeft("ti-face-smile", "Friend's Connection", "We are bilingual Chinese who are willing refer our Chinese friends for your business connection.")
                 .col-lg-4.col-md-6
-                    +IconBox("ti-search", "Vendor Verification", "Local vendors are sometimes confusing, LivAway helps you to verify and to suggest the most reliable ones.", "")
+                    +iconBoxLeft("ti-marker-alt", "Verify Sales Strategy", "Present your sales script to your target, check their feedback, listen to their advice and reaction.")
                 .col-lg-4.col-md-6
-                    +IconBox("ti-location-pin", "3rd-Tier Cities", "Ready to reach the rural population but don't know how? LivAway network in small cities of China takes your business in.", "")
+                    +iconBoxLeft("ti-star", "Verify Marketing Strategy", "Present your marketing brochure/video to your target, ask them what attracted them most, what didn't.")
                 .col-lg-4.col-md-6
-                    +IconBox("ti-world", "Asset Liquidity", "LivAway uses blockchain technology to maximize the liquidity of your startup's equity and assets. ", "")
-                
+                    +iconBoxLeft("ti-layout-sidebar-right", "Verify User Persona", "Make an assumption of your target's persona, verify with the interviewee to prove/disprove your assumption.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-headphone-alt", "Online Interview", "No matter you are in your own country or in China, we get your target customer to talk to you online.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-layout-slider", "Refine Your Product", "Use all the sincere feedback to iterate your product to achieve product-market fit.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-stats-up", "Refine Your Strategy", "Analyze the feedback of your target customer to make the revision your sales script/strategy.")
+            .row
+                .col-md-12.text-center
+                    p
+                        a(href="https://jinshuju.net/f/6caOzE" class="btn btn-lg btn-circle btn-brand") Get a Quote Now
+    
     // Services end
     = "\n"
+
+    // Testimonials
+    section.module.parallax(data-background="assets/images/module-12.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-12
+                    .space(data-MY="50px")
+
+            .row
+                .col-md-12
+                    .review-slides.owl-carousel
+                        +TestimonialsCard("Allen Wolff", "LivAway’s network of industry experts are an invaluable resource for new startup founders operating in China. I gained fresh insights into the ever-changing education market thanks to LivAway.", "./assets/images/clients/allen.jpg")
+                        +TestimonialsCard("Duraid Hasan", "We have developed a great partnership with LivAway and their dedication to our enterprise expansion is evident in all aspects of our business development locally.  We appreciate their constant feedback and creative networking approach, They have truly helped us matching our company with high-end partners perfectly.", "./assets/images/clients/duraid.jpg")
+                        +TestimonialsCard("David 'DC' Collier ", "LivAway was very helpful to me in meeting some relevant people for my startup and also navigating the maze of Tencent application processes for WeChat apps. A great network for any foreign founder to connect to!", "./assets/images/clients/dc.jpg")
+
+            .row
+                .col-md-12
+                    .space(data-MY="50px")
+    // Testimonials end
 
     // Counters
     section.module.bg-gray.p-b-0
@@ -49,9 +92,9 @@ append content
 
             .row
                 .col-md-3
-                    +Counter("Local Experts", "537", "icon-energy icons")
+                    +Counter("Local Business Resources", "50000", "icon-energy icons")
                 .col-md-3
-                    +Counter("Local Startup Partners", "54", "icon-game-controller icons")
+                    +Counter("LivAway Connectors", "85", "icon-game-controller icons")
                 .col-md-3
                     +Counter("Business Events Hold", "103", "icon-fire icons")
                 .col-md-3
